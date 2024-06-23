@@ -1,0 +1,17 @@
+apply plugin: IntegrationTestsPlugin
+
+dependencies {
+    implementation project(":orders:orders-web")
+    implementation project(":orders:orders-domain")
+    implementation project(":orders:orders-persistence")
+
+    integrationTestImplementation project(":test-container-util")
+
+    integrationTestImplementation project(":customers:customers-api-credit-management")
+    integrationTestImplementation project(":money")
+    integrationTestImplementation project(":notifications:notifications-api")
+
+    integrationTestImplementation "org.springframework.boot:spring-boot-starter-web"
+
+
+}
